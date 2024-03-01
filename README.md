@@ -12,8 +12,8 @@ An app to create and save a wishlist of books. Books already readed or in wishli
 
 
 # What to (books)
-[] Books can be added by user (create book)
-[] Books have title, author, year, genre, description, edition?
+[] There's a books database
+[] Books have title, author, genre, description, edition?
 [] Books must have a "already readed" flag.
 
 
