@@ -4,7 +4,7 @@ An app to create and save a wishlist of books. Books already readed or in wishli
 # v1.0
 
 # What to (users)
-[] User can create an account (name, e-mail, password, age, description?)
+[] User can create an account (name, e-mail, password, description?)
 [] User can log in
 [] User has two lists: already readed books and wish to read books
 [] User can add new books or remove a book from any list

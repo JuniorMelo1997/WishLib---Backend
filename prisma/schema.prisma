@@ -6,3 +6,38 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+model User {
+  id          String   @id @default(uuid())
+  email       String   @unique
+  username    String
+  password    String
+  description String?
+  createdAt   DateTime @default(now())
+
+  lists List[]
+
+  @@map("users")
+}
+
+model Books {
+  id          String   @id @default(uuid())
+  title       String
+  body        String
+  createdAt   DateTime @default(now())
+  limitDate   String?
+  isCompleted Boolean  @default(false)
+
+  lists List[]
+
+  @@map("notes")
+}
+
+model List {
+  id     String @id @default(uuid())
+  userId String
+  bookId String
+
+  user User  @relation(fields: [userId], references: [id])
+  book Books @relation(fields: [bookId], references: [id])
+}
